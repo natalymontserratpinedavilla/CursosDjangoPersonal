@@ -1,0 +1,55 @@
+{% extends "contenido/encabezado.html" %}
+
+{% load static %}
+{% block titulo %}
+  <title>Principal</title>
+{% endblock %}
+
+{% block contenido %}
+<div class="container py-5">
+  <div class="row justify-content-center text-center">
+    <div class="col-md-10">
+      <h1 class="display-5 fw-semibold">
+        ¡Bienvenido! Al mundo de la programación de HOLA MUNDO
+      </h1>
+      <p class="lead text-muted mt-3">
+        Aprende a programar desde cero con nuestros cursos en Python, desarrollo web.
+      </p>
+    </div>
+  </div>
+  
+
+  <div class="container my-4">
+    <h2 class="text-center mb-4">Lista de Cursos</h2>
+<table class="table table-hover table-light shadow-sm rounded-3 overflow-hidden text-center align-middle">
+  <thead class="table-secondary">
+    <tr>
+      <th scope="col">Imagen</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Duración (h)</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for curso in cursos %}
+    <tr>
+      <td>
+       
+           {% if curso.imagen %}
+                    <img src="{{ curso.imagen.url }}" alt="{{ curso.nombre }}" style="max-width: 100px;">
+                {% else %}
+                    Sin imagen
+                {% endif %} </td>
+      <td class="fw-semibold">{{ curso.nombre }}</td>
+      <td class="text-start text-muted">{{ curso.descripcion }}</td>
+      <td class="text-success fw-bold">${{ curso.precio }}</td>
+      <td>{{ curso.duracion_horas }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+  </div>
+</div>
+{% endblock %}

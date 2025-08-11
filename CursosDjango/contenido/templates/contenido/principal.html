@@ -1,0 +1,50 @@
+{% extends "contenido/encabezado.html" %}
+{% block titulo %}
+  <title>Principal</title>
+{% endblock %}
+
+{% block contenido %}
+<div class="container py-5">
+  <div class="row justify-content-center text-center">
+    <div class="col-md-10">
+      <h1 class="display-5 fw-semibold" ">
+        ¡Bienvenido! Al mundo de la programación de HOLA MUNDO
+      </h1>
+      <p class="lead text-muted mt-3">
+        Aprende a programar desde cero con nuestros cursos en Python, desarrollo web.
+      </p>
+    </div>
+  </div>
+
+
+
+
+  <div class="container my-4">
+  <h2 class="text-center mb-4">Lista de Cursos</h2>
+
+  <table class="table table-bordered table-striped text-center align-middle">
+    <thead class="table-dark">
+      <tr>
+        <th>Imagen</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Duración (h)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <img src="/media/cursos/js.png" alt="Imagen de JavaScript Moderno" class="img-thumbnail" width="100" height="100">
+        </td>
+        <td class="fw-semibold">JavaScript Moderno</td>
+        <td class="text-start">Curso introductorio para aprender las bases del JavaScript actual.</td>
+        <td>$199.99</td>
+        <td>40</td>
+      </tr>
+   
+     
+    </tbody>
+  </table>
+</div>
+  {% endblock %}

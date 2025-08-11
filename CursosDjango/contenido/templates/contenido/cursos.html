@@ -1,0 +1,27 @@
+{% extends "contenido/encabezado.html" %}
+
+{% block titulo %}
+  <title>Cursos</title>
+{% endblock %}
+
+{% block contenido %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-lg">
+        <div class="card-header bg-dark text-white text-center">
+          <h4>Cursos Disponibles</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">JavaScript Moderno</li>
+            <li class="list-group-item">Desarrollo con React</li>
+            <li class="list-group-item">Python para Ciencia de Datos</li>
+            <li class="list-group-item">Desarrollo de Apps con Flutter</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

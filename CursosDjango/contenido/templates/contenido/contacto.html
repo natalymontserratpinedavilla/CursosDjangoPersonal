@@ -1,0 +1,52 @@
+{% extends "contenido/encabezado.html" %}
+
+{% block titulo %}
+  <title>Contacto</title>
+{% endblock %}
+
+{% block contenido %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-lg">
+        <div class="card-header bg-dark text-white text-center">
+          <h4>Registrar</h4>
+        </div>
+        <div class="card-body">
+          <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="matricula" class="form-label">Nombre:</label>
+              <input type="text" id="matricula" name="matricula" class="form-control" placeholder="Tu nombre">
+            </div>
+
+            <div class="mb-3">
+              <label for="correo" class="form-label">Correo:</label>
+              <input type="email" id="correo" name="nombre" class="form-control" placeholder="correo@ejemplo.com">
+            </div>
+
+            <div class="mb-3">
+              <label for="curso" class="form-label">Curso:</label>
+              <select id="curso" name="carrera" class="form-select">
+                <option>JavaScript Moderno</option>
+                <option>Desarrollo con React</option>
+                <option>Python para Ciencia de Datos</option>
+                <option>Desarrollo de Apps con Flutter</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="comentario" class="form-label">Comentario:</label>
+              <textarea id="comentario" name="comentario" rows="5" class="form-control" placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
